@@ -1,6 +1,6 @@
 # PAT
 题号|知识点|链接
 --|:--:|--:
-Test|test|[1001 A+B Format](/1001.cpp)
-||
+1001|常识|[1001 A+B Format](/1001.cpp)
+1025|结构体排序|[1025 PAT Ranking](/1025.cpp)
 ||
