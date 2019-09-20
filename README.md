@@ -1,6 +1,6 @@
 # PAT
 题号|知识点|<center>C++</center>|Python3
 --|:--:|--:|--:
-1001|常识|[A+B Format](/1001.cpp)|
-1025|结构体排序|[PAT Ranking](/1025.cpp)|
+1001|常识|[A+B Format](/c++/1001.cpp)|[A+B Format](/Python3/1001.py)
+1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|
 |||
