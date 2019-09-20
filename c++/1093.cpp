@@ -19,12 +19,8 @@ using namespace std;
 
 const int MAXN = 1e5+10;
 int a[MAXN];
-//int t[MAXN];
-//int c[MAXN];
 
 int main(){
-//    cout << "input:\n";
-//    memset(t, 0, sizeof(t));
     memset(a, 0, sizeof(a));
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -41,9 +37,7 @@ int main(){
     for (int i=len-1; i>0; i--) {
         if(data[i] == 'T') countT++;
         else if(data[i] == 'A') ans += countT*a[i];
+        if(ans >=1000000007) ans %= 1000000007;
     }
-    if(ans >=1000000007) ans %= 1000000007;
     cout << ans;
-    
-    
 }
