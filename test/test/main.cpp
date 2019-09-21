@@ -18,36 +18,24 @@
 using namespace std;
 
 
-int n;
-int order[60];
-int card[60];
-int ans[60];
 
+int t;
+
+long long a,b,c;
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    cin >> n; 
-    for (int i=1; i<55; ++i){
-        cin >> order[i];
-        card[i] = i;
+    cin >> t;
+    for (int i=1; i<=t; ++i) {
+        cin >> a >> b >> c;
+        long long ans = a+b;
+        
+        cout <<"Case #"<<i<<": ";
+        if(a>0 && b >0 && ans<0) cout << "true";
+        else if(a<0 && b <0 && ans>=0) cout << "false";
+        else if(ans > c) cout<<"true";
+        else cout <<"false";
+        cout <<"\n";
     }
-    while (n--) {
-        for (int i=1; i<55; ++i) {
-            ans[order[i]] = card[i];
-        }
-        for (int i=1; i<55; ++i) {
-            card[i] = ans[i];
-        }
-    }
-    for (int i=1; i<55; ++i) {
-//        cout << ans[i] << " ";
-        if(ans[i] <= 13) cout <<"S"<<ans[i];
-        else if(ans[i]<=26) cout <<"H"<<ans[i]-13;
-        else if(ans[i]<=39) cout <<"C"<<ans[i]-26;
-        else if(ans[i]<=52) cout <<"D"<<ans[i]-39;
-        else cout <<"J"<<ans[i]%-52;
-        if(i != 54) cout << " ";
-    }
-    
 }
