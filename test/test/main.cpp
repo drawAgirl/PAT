@@ -19,44 +19,36 @@
 using namespace std;
 
 
-struct node {
-    string name;
-    string id;
-    int score;
-};
-vector<node> v1,v2; // v1->male v2->female
+int n,base;
+vector<int> v;
 
-bool cmp(node &a,node &b){
-    return a.score > b.score;
+
+void to_array(int n,int base){
+    int a = n;
+    while (a != 0) {
+        v.push_back(a%base);
+        a /= base;
+    }
 }
-bool cmp1(node &a,node &b){
-    return a.score < b.score;
-}
+
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n;
-    cin >> n;
-    for (int i=0; i<n; ++i) {
-        node temp;
-        string sex;
-        cin >> temp.name >> sex >> temp.id >> temp.score;
-        if (sex == "M") v1.push_back(temp);
-        else v2.push_back(temp);
+    cin >> n >> base;
+    to_array(n, base);
+    bool flag = true;
+    int len = (int)v.size()/2;
+    for (int i=0; i<=len; ++i) {
+        if(v[i] != v[v.size()-1-i]){
+            flag = false;
+            break;
+        }
     }
-    if(v1.size() == 0){
-        sort(v2.begin(), v2.end(), cmp);
-        cout << v2[0].name << " " << v2[0].id << "\nAbsent\n" << "NA";
-    }else if(v2.size() == 0){
-        sort(v1.begin(), v1.end(), cmp1);
-        cout << "Absent\n" << v1[0].name <<" "<<v1[0].id << "\nNA";
-    }else{
-        sort(v1.begin(), v1.end(), cmp1);
-        sort(v2.begin(), v2.end(), cmp);
-        cout << v2[0].name << " " << v2[0].id << "\n";
-        cout << v1[0].name << " " << v1[0].id << "\n";
-        cout << v2[0].score - v1[0].score;
+    if(!flag) printf("No\n");
+    else printf("Yes\n");
+    for (int i=(int)v.size()-1; i>=0; i--) {
+        printf("%d",v[i]);
+        if(i!=0) printf(" ");
     }
-    
 }
