@@ -20,3 +20,4 @@
 1069|数学|[The Black Hole of Numbers](/c++/1069.cpp)|[The Black Hole of Numbers](/Python3/1069.py)
 1073|字符串处理|[Scientific Notation ](/c++/1073.cpp)|[Scientific Notation ](/Python3/1073.py)
 1077|字符串处理|[Kuchiguse ](/c++/1077.cpp)|[Kuchiguse ](/Python3/1077.py)
+1082|字符串处理|[Read Number in Chinese ](/c++/1082.cpp)|[Read Number in Chinese ](/Python3/1092.py)
