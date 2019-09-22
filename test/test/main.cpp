@@ -18,37 +18,24 @@
 #include <string.h>
 using namespace std;
 
+int a,b,c;
+char radix[13] = {'0','1','2','3','4','5','6','7','8','9','A','B','C'};
 
-int n,base;
-vector<int> v;
-
-
-void to_array(int n,int base){
-    int a = n;
-    while (a != 0) {
-        v.push_back(a%base);
-        a /= base;
+void to_mar(int n){
+    string ans = "";
+    while (n != 0) {
+        ans = radix[n % 13]+ans;
+        n /= 13;
     }
+    cout << ans;
 }
-
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    cin >> n >> base;
-    to_array(n, base);
-    bool flag = true;
-    int len = (int)v.size()/2;
-    for (int i=0; i<=len; ++i) {
-        if(v[i] != v[v.size()-1-i]){
-            flag = false;
-            break;
-        }
-    }
-    if(!flag) printf("No\n");
-    else printf("Yes\n");
-    for (int i=(int)v.size()-1; i>=0; i--) {
-        printf("%d",v[i]);
-        if(i!=0) printf(" ");
-    }
+    cin >> a >> b >> c;
+    cout <<"#";
+    to_mar(a);
+    to_mar(b);
+    to_mar(c);
 }

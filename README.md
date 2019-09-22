@@ -8,6 +8,7 @@
 1012|常识|[排序查找](/c++/1011.cpp)|[World Cup Betting](/Python3/101.py)
 1019|进制转换|[General Palindromic Number](/c++/1019.cpp)|[General Palindromic Number](/Python3/1019.py)
 1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|
+1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1036|排序查找|[Boys vs Girls](/c++/1036.cpp)|[Boys vs Girls](/Python/1036.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py)
