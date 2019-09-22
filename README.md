@@ -12,6 +12,11 @@
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1036|排序查找|[Boys vs Girls](/c++/1036.cpp)|[Boys vs Girls](/Python/1036.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py)
+1058|进制转换|[A+B in Hogwarts](/c++/1058.cpp)|[A+B in Hogwarts](/Python3/1058.py)
+1061|字符串处理|[Dating](/c++/1061.cpp)|[Dating](/Python3/1061.py)
+<!--1061|字符串处理|[Dating](/c++/)|[Dating](/Python3/)-->
+<!--1061|字符串处理|[Dating](/c++/)|[Dating](/Python3/)-->
+<!--1061|字符串处理|[Dating](/c++/)|[Dating](/Python3/)-->
 1065|溢出|[A+B and C (64bit)](/c++/1065.cpp)|[A+B and C (64bit)](/Python3/1065.py)
 1069|数学|[The Black Hole of Numbers](/c++/1069.cpp)|[The Black Hole of Numbers](/Python3/1069.py)
 
