@@ -18,34 +18,29 @@
 #include <string.h>
 using namespace std;
 
-unordered_map<int, int> HASH;
+
 vector<int> v;
+unordered_map<int, int> HASH;
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n,m;
-    cin >> n >> m;
-    for (int i=0;i<n;++i){
+    int n;
+    cin >> n;
+    for (int i=0; i<n; ++i) {
         int a;
         cin >> a;
-        HASH[a]++;
         v.push_back(a);
+        HASH[a]++;
     }
-    sort(v.begin(), v.end());
+    int first = 0;
     for (int i=0; i<v.size(); ++i) {
-        if(HASH[m-v[i]]){
-            if (m-v[i] == v[i]){
-                if(HASH[v[i]] < 2) continue;
-            }
-            int x,y;
-            x = m-v[i];
-            y = v[i];
-            if(x > y) swap(x, y);
-            printf("%d %d",x,y);
-            return 0;
+        if(HASH[v[i]] == 1){
+            first = v[i];
+            break;
         }
     }
-    printf("No Solution");
+    if (first) printf("%d\n",first);
+    else printf("None\n");
     
 }
