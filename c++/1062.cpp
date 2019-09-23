@@ -68,4 +68,3 @@ int main(){
         cout << people[i].id << " " << people[i].virtue << " " << people[i].talent << "\n";
     }
 }
-
