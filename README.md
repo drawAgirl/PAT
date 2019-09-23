@@ -14,6 +14,7 @@
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1035|字符串处理|[Password](/c++/1035.cpp)|[Password](/Python3/1035.py)
 1036|排序查找|[Boys vs Girls](/c++/1036.cpp)|[Boys vs Girls](/Python/1036.py)
+1037|贪心排序|[Magic Coupon](/c++/1037.cpp)|[Magic Coupon](/Python/1037.py)
 1041|哈希|[Be Unique](/c++/1041.cpp)|[Be Unique](/Python3/1041.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py)
 1048|哈希|[Find Coins](/c++/1048.cpp)|[Find Coins](/Python3/1048.py)

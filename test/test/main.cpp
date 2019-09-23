@@ -19,44 +19,39 @@
 using namespace std;
 
 
-vector<double> v;
-typedef pair<double, int> pp;
-vector<pp> price;
-
-bool cmp(pp &a,pp &b){
-    return a.first > b.first;
-}
+vector<int> v1,v2;
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    double n,m;
-    cin >> n >> m;
-    for (int i=0; i<n; ++i){
-        double t;
+    int n,m;
+    int t;
+    int ans =0;
+    cin >> n;
+    for (int i=0; i<n; ++i) {
         cin >> t;
-        v.push_back(t);
+        v1.push_back(t);
     }
-    for (int i=0;i<n;++i){
-        pp temp;
-        cin >> temp.first;
-        temp.first /= v[i];
-        temp.second = i;
-        price.push_back(temp);
+    cin >> m;
+    for (int i=0; i<m; ++i) {
+        cin >> t;
+        v2.push_back(t);
     }
-    sort(price.begin(), price.end(), cmp);
-    double ans = 0;
-    for (int i=0; i<n && m>0; ++i) {
-        if(v[price[i].second] >= m){
-            ans += m*price[i].first;
-            m -= v[price[i].second];
-        }else{
-            m -= v[price[i].second];
-            ans += v[price[i].second]*price[i].first;
-        }
+    sort(v1.begin(), v1.end());
+    sort(v2.begin(), v2.end());
+    int i=0;
+    while (i<n && i <m && v1[i]<0 && v2[i]<0) {
+        ans += v1[i]*v2[i];
+        i++;
     }
-    printf("%.2f",ans);
-    
-    
+    i = n-1;
+    int j = m-1;
+    while (i>=0&& j>=0 &&v1[i]>0 && v2[j]>0) {
+        ans += v1[i]*v2[j];
+        i--;
+        j--;
+    }
+    printf("%d\n",ans);
     
 }
+
