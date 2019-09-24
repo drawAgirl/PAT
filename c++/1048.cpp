@@ -36,7 +36,7 @@ int main(){
     for (int i=0; i<v.size(); ++i) {
         if(HASH[m-v[i]]){
             if (m-v[i] == v[i]){
-                if(HASH[v[i]] < 2) break;
+                if(HASH[v[i]] < 2) continue;
             }
             int x,y;
             x = m-v[i];

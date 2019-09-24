@@ -18,12 +18,10 @@
 #include <string.h>
 using namespace std;
 
+
 int main(){
     int n;
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    scanf("%d",&n);
-    scanf("%*c");
+    scanf("%d%*c",&n);
     string ans;
     for (int i=0; i<n; i++) {
         string a;
