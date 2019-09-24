@@ -12,6 +12,7 @@
 1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|
 1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
+1032|链表|[Sharing](/c++/1032.cpp)|[Sharing](/Python3/1032.py)
 1035|字符串处理|[Password](/c++/1035.cpp)|[Password](/Python3/1035.py)
 1036|排序查找|[Boys vs Girls](/c++/1036.cpp)|[Boys vs Girls](/Python3/1036.py)
 1037|贪心排序|[Magic Coupon](/c++/1037.cpp)|[Magic Coupon](/Python3/1037.py)
@@ -20,6 +21,7 @@
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py)
 1048|哈希|[Find Coins](/c++/1048.cpp)|[Find Coins](/Python3/1048.py)
 1050|哈希|[String Subtraction](/c++/1050.cpp)|[String Subtraction](/Python3/1050.py)
+1052|链表|[Linked List Sorting](/c++/1052.cpp)|[Linked List Sorting-超时](/Python3/1052.py)
 1058|进制转换|[A+B in Hogwarts](/c++/1058.cpp)|[A+B in Hogwarts](/Python3/1058.py)
 1061|字符串处理|[Dating](/c++/1061.cpp)|[Dating](/Python3/1061.py)
 1062|排序|[Talent and Virtue](/c++/1062.cpp)|[Talent and Virtue-超时](/Python3/1062.py)
