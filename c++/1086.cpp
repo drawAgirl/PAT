@@ -63,7 +63,7 @@ void Post(TreeNode root){
     printf("%d",root->data);
     if(--n) printf(" ");
 }
-// PAT关了同步后不允许同时用cin和scanf
+
 int main(){
 //    ios::sync_with_stdio(false);
 //    cin.tie(0);

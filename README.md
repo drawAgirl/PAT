@@ -1,4 +1,6 @@
 # PAT
+**记录一下我刷PAT的经历，参考了晴神和柳神的题解**
+由于Python3本身的原因还有我太菜了，部分题Python3有1，2个测试点超时，如果有不超时的解法也希望能分享一下
 题号|知识点|<center>C++</center>|Python3
 --|:--:|--:|--:
 1001|常识|[A+B Format](/c++/1001.cpp)|[A+B Format](/Python3/1001.py)
@@ -9,6 +11,7 @@
 1011|排序查找|[World Cup Betting](/c++/1011.cpp)|[World Cup Betting](/Python3/1011.py)
 1012|排序查找|[The Best Rank](/c++/1012.cpp)|[The Best Rank](/Python3/1012.py)
 1019|进制转换|[General Palindromic Number](/c++/1019.cpp)|[General Palindromic Number](/Python3/1019.py)
+1020|二叉树遍历|[Tree Traversals](/c++/1020.cpp)|[Tree Traversals](/Python3/1020.py)
 1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|
 1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
@@ -29,8 +32,11 @@
 1067|贪心排序|[Sort with Swap(0, i)](/c++/1067.cpp)|[Sort with Swap(0, i)-超时](/Python3/1067.py)
 1069|数学|[The Black Hole of Numbers](/c++/1069.cpp)|[The Black Hole of Numbers](/Python3/1069.py)
 1070|排序贪心|[Mooncake](/c++/1070.cpp)|[Mooncake](/Python3/1070.py)
-1073|字符串处理|[Scientific Notation ](/c++/1073.cpp)|[Scientific Notation](/Python3/1073.py)s
+1073|字符串处理|[Scientific Notation ](/c++/1073.cpp)|[Scientific Notation](/Python3/1073.py)
+1074|链表|[Reversing Linked List ](/c++/1074.cpp)|[Reversing Linked List-超时](/Python3/1074.py)
 1077|字符串处理|[Kuchiguse](/c++/1077.cpp)|[Kuchiguse](/Python3/1077.py)
 1082|字符串处理|[Read Number in Chinese ](/c++/1082.cpp)|[Read Number in Chinese](/Python3/1082.py)
 1084|哈希|[Broken Keyboard](/c++/1084.cpp)|[Broken Keyboard](/Python3/1084.py)
 1085|二分查找|[Perfect Sequence](/c++/1085.cpp)|[Perfect Sequence-超时](/Python3/1085.py)
+1086|二叉树遍历|[Tree Traversals Again](/c++/1086.cpp)|[Tree Traversals Again](/Python3/1086.py)
+1097|链表|[Deduplication on a Linked List](/c++/1097.cpp)|[Deduplication on a Linked List-超时](/Python3/1097.py)
