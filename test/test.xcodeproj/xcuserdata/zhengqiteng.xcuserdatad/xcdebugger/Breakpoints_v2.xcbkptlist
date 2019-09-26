@@ -7,15 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4969EE7-1487-43C9-BA42-58DC4D0EA1A8"
+            uuid = "614215D7-9DC8-41B5-96BD-7F60738F3602"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "test/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
