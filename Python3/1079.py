@@ -8,7 +8,6 @@ for i in range(n):
         weight[i] = b[0]
     else:
         son[i] = b
-global ans
 ans = 0.0
 def dfs(root,depth):
     if weight.get(root) != None: #这里查找weight也可以，就是为了找到叶子结点停止,应该Wweight快一点

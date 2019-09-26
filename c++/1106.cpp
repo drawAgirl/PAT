@@ -18,31 +18,33 @@
 #include <string.h>
 using namespace std;
 
-int n,m,t,k,son;
-int arr[110];
+int n,k,t;
+double p,r; //root = 0
 unordered_map<int, vector<int>> tree;
-vector<int> level;
-int max_depth = 0;
+int min_depth = 0x7f7f7f7f;
+int cnt = 1;
 void dfs(int root,int depth){
-    max_depth = max(max_depth,depth);
     if(tree.find(root) == tree.end()){
-        arr[depth]++;
+        if(min_depth > depth){
+            min_depth = depth;
+            cnt = 1;
+        }
+        else if(min_depth == depth) cnt++;
         return;
     }
     for(auto each:tree[root]) dfs(each, depth+1);
 }
 
 int main(){
-    memset(arr, 0, sizeof(arr));
-    scanf("%d%d",&n,&m);
-    for(int i=0;i<m;++i){
-        scanf("%d%d",&t,&k);
+    scanf("%d%lf%lf",&n,&p,&r);
+    r /= 100;
+    for(int i=0;i<n;++i){
+        scanf("%d",&k);
         while (k--) {
-            scanf("%d",&son);
-            tree[t].push_back(son);
+            scanf("%d",&t);
+            tree[i].push_back(t);
         }
     }
-    dfs(1,1);
-    printf("%d",arr[1]);
-    for(int i=2;i<=max_depth;++i) printf(" %d",arr[i]);
+    dfs(0, 0);
+    printf("%.4f %d",p*pow(1+r, min_depth),cnt);
 }

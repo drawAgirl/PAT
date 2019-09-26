@@ -8,6 +8,7 @@
 --|:--:|--:|--:
 1001|常识|[A+B Format](/c++/1001.cpp)|[A+B Format](/Python3/1001.py)
 1002|数学模拟|[A+B for Polynomials](/c++/1002-2.cpp)|[A+B for Polynomials](/Python3/1002.py)
+1004|树的遍历|[Counting Leaves](/c++/1004.cpp)|[Counting Leaves](/Python3/1004.py)
 1005|字符串处理|[Spell It Right](/c++/1005.cpp)|[Spell It Right](/Python3/1005.py)
 1006|排序查找|[Sign In and Sign Out ](/c++/1006.cpp)|[Sign In and Sign Out](/Python3/1006.py)
 1009|数学模拟|[Product of Polynomials](/c++/1009.cpp)|[Product of Polynomials](/Python3/1009.py)
@@ -44,6 +45,8 @@
 1084|哈希|[Broken Keyboard](/c++/1084.cpp)|[Broken Keyboard](/Python3/1084.py)
 1085|二分查找|[Perfect Sequence](/c++/1085.cpp)|[Perfect Sequence-超时](/Python3/1085.py)
 1086|二叉树遍历|[Tree Traversals Again](/c++/1086.cpp)|[Tree Traversals Again](/Python3/1086.py)
+1090|二叉树遍历|[Highest Price in Supply Chain](/c++/1090.cpp)|[Highest Price in Supply Chain-超时](/Python3/1090.py)
+1094|树的遍历|[The Largest Generation](/c++/1094.cpp)|[The Largest Generation](/Python3/1094.py)
 1097|链表|[Deduplication on a Linked List](/c++/1097.cpp)|[Deduplication on a Linked List-超时](/Python3/1097.py)
 1102|二叉树遍历|[Invert a Binary Tree](/c++/1102.cpp)|[Invert a Binary Tree](/Python3/1102.py)
-
+1106|树的遍历|[Lowest Price in Supply Chain](/c++/1106.cpp)|[Lowest Price in Supply Chain-超时](/Python3/1106.py)
