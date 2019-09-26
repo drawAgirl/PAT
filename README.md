@@ -1,7 +1,7 @@
 # PAT
 **记录一下我刷PAT的经历，参考了晴神和柳神的题解**
 由于Python3本身的原因还有我太菜了，部分题Python3有1，2个测试点超时，如果有不超时的解法也希望能分享一下
-
+还有一些题目好像是几个测试点输入情况不同，导致Python一些测试点非0返回。
 
 
 题号|知识点|<center>C++</center>|Python3
@@ -26,6 +26,7 @@
 1038|排序|[Recover the Smallest Number](/c++/1038.cpp)|[Recover the Smallest Number](/Python3/1038.py)
 1041|哈希|[Be Unique](/c++/1041.cpp)|[Be Unique](/Python3/1041.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py)
+1043|平衡二叉树|[Is It a Binary Search Tree](/c++/1043.cpp)|[Is It a Binary Search Tree-非0返回](/Python3/1043.py)
 1048|哈希|[Find Coins](/c++/1048.cpp)|[Find Coins](/Python3/1048.py)
 1050|哈希|[String Subtraction](/c++/1050.cpp)|[String Subtraction](/Python3/1050.py)
 1052|链表|[Linked List Sorting](/c++/1052.cpp)|[Linked List Sorting-超时](/Python3/1052.py)

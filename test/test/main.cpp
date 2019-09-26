@@ -18,31 +18,99 @@
 #include <string.h>
 using namespace std;
 
-int n,m,t,k,son;
-int arr[110];
-unordered_map<int, vector<int>> tree;
-vector<int> level;
-int max_depth = 0;
-void dfs(int root,int depth){
-    max_depth = max(max_depth,depth);
-    if(tree.find(root) == tree.end()){
-        arr[depth]++;
-        return;
+
+typedef struct node{
+    int data;
+    node* left;
+    node* right;
+}Node,*TreeNode;
+
+int n,data;
+vector<int> v;
+vector<int> pre;
+vector<int> pre_m;
+vector<int> post;
+TreeNode insert(TreeNode root,int data){
+    if (!root) {
+        root = new Node;
+        root->data = data;
+        root->left = root->right = NULL;
+        return root;
     }
-    for(auto each:tree[root]) dfs(each, depth+1);
+    if(data < root->data)
+        root->left = insert(root->left, data);
+    else
+        root->right = insert(root->right, data);
+    return root;
+}
+vector<int> v1;
+void Preorder(TreeNode root){
+    if(!root) return;
+    pre.push_back(root->data);
+    Preorder(root->left);
+    Preorder(root->right);
+}
+int space = 0;
+void Post(TreeNode root){
+    if(!root) return;
+    Post(root->left);
+    Post(root->right);
+    space++;
+    printf("%d",root->data);
+    if(space != n) printf(" ");
+}
+
+void Post_mirror(TreeNode root){
+    if(!root) return;
+    Post_mirror(root->right);
+    Post_mirror(root->left);
+    space++;
+    printf("%d",root->data);
+    if(space != n) printf(" ");
+}
+
+void Pre_mirror(TreeNode root){
+    if(!root) return;
+    pre_m.push_back(root->data);
+    Pre_mirror(root->right);
+    Pre_mirror(root->left);
 }
 
 int main(){
-    memset(arr, 0, sizeof(arr));
-    scanf("%d%d",&n,&m);
-    for(int i=0;i<m;++i){
-        scanf("%d%d",&t,&k);
-        while (k--) {
-            scanf("%d",&son);
-            tree[t].push_back(son);
+    scanf("%d",&n);
+    TreeNode root = NULL;
+    for(int i=0;i<n;++i){
+        scanf("%d",&data);
+        v.push_back(data);
+        root = insert(root, data);
+    }
+    bool flag1 = true;
+    Preorder(root);
+    for(int i=0;i<n;++i){
+        if(pre[i] != v[i]){
+            flag1 = false;
+            break;
         }
     }
-    dfs(1,1);
-    printf("%d",arr[1]);
-    for(int i=2;i<=max_depth;++i) printf(" %d",arr[i]);
+    if(flag1){
+        printf("YES\n");
+        Post(root);
+        return 0;
+    }else{
+        bool flag2 = true;
+        Pre_mirror(root);
+        for(int i=0;i<n;++i){
+            if(pre_m[i] != v[i]){
+                flag2 = false;
+                break;
+            }
+        }
+        if(flag2){
+            printf("YES\n");
+            Post_mirror(root);
+        }else{
+            printf("NO\n");
+        }
+    }
+    
 }
