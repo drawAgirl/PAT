@@ -1,6 +1,9 @@
 # PAT
 **记录一下我刷PAT的经历，参考了晴神和柳神的题解**
 由于Python3本身的原因还有我太菜了，部分题Python3有1，2个测试点超时，如果有不超时的解法也希望能分享一下
+
+
+
 题号|知识点|<center>C++</center>|Python3
 --|:--:|--:|--:
 1001|常识|[A+B Format](/c++/1001.cpp)|[A+B Format](/Python3/1001.py)
@@ -36,11 +39,10 @@
 1073|字符串处理|[Scientific Notation ](/c++/1073.cpp)|[Scientific Notation](/Python3/1073.py)
 1074|链表|[Reversing Linked List ](/c++/1074.cpp)|[Reversing Linked List-超时](/Python3/1074.py)
 1077|字符串处理|[Kuchiguse](/c++/1077.cpp)|[Kuchiguse](/Python3/1077.py)
-1079|字符串处理|[Total Sales of Supply Chain ](/c++/1079.cpp)|[Total Sales of Supply Chain-超时](/Python3/1079.py)
+1079|树的遍历|[Total Sales of Supply Chain ](/c++/1079.cpp)|[Total Sales of Supply Chain-超时](/Python3/1079.py)
 1082|字符串处理|[Read Number in Chinese ](/c++/1082.cpp)|[Read Number in Chinese](/Python3/1082.py)
 1084|哈希|[Broken Keyboard](/c++/1084.cpp)|[Broken Keyboard](/Python3/1084.py)
 1085|二分查找|[Perfect Sequence](/c++/1085.cpp)|[Perfect Sequence-超时](/Python3/1085.py)
 1086|二叉树遍历|[Tree Traversals Again](/c++/1086.cpp)|[Tree Traversals Again](/Python3/1086.py)
 1097|链表|[Deduplication on a Linked List](/c++/1097.cpp)|[Deduplication on a Linked List-超时](/Python3/1097.py)
 1102|二叉树遍历|[Invert a Binary Tree](/c++/1102.cpp)|[Invert a Binary Tree](/Python3/1102.py)
-
