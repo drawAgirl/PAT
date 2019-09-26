@@ -34,6 +34,7 @@
 1058|进制转换|[A+B in Hogwarts](/c++/1058.cpp)|[A+B in Hogwarts](/Python3/1058.py)
 1061|字符串处理|[Dating](/c++/1061.cpp)|[Dating](/Python3/1061.py)
 1062|排序|[Talent and Virtue](/c++/1062.cpp)|[Talent and Virtue-超时](/Python3/1062.py)
+1064|二叉平衡树|[Complete Binary Search ](/c++/1064.cpp)|[Complete Binary Search ](/Python3/1064.py)
 1065|溢出|[A+B and C (64bit)](/c++/1065.cpp)|[A+B and C (64bit)](/Python3/1065.py)
 1067|贪心排序|[Sort with Swap(0, i)](/c++/1067.cpp)|[Sort with Swap(0, i)-超时](/Python3/1067.py)
 1069|数学|[The Black Hole of Numbers](/c++/1069.cpp)|[The Black Hole of Numbers](/Python3/1069.py)
