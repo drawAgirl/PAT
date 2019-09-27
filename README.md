@@ -6,7 +6,7 @@
 
 题号|知识点|<center>C++</center>|Python3
 --|:--:|--:|--:
-1001|常识|[A+B Format](/c++/1001.cpp)|[A+B Format](/Python3/1001.py)
+1001|字符串处理|[A+B Format](/c++/1001.cpp)|[A+B Format](/Python3/1001.py)
 1002|数学模拟|[A+B for Polynomials](/c++/1002-2.cpp)|[A+B for Polynomials](/Python3/1002.py)
 1004|树的遍历|[Counting Leaves](/c++/1004.cpp)|[Counting Leaves](/Python3/1004.py)
 1005|字符串处理|[Spell It Right](/c++/1005.cpp)|[Spell It Right](/Python3/1005.py)
@@ -54,3 +54,4 @@
 1099|BST|[Build A Binary Search Tree](/c++/1099.cpp)|[Build A Binary Search Tree](/Python3/1099.py)
 1102|二叉树遍历|[Invert a Binary Tree](/c++/1102.cpp)|[Invert a Binary Tree](/Python3/1102.py)
 1106|树的遍历|[Lowest Price in Supply Chain](/c++/1106.cpp)|[Lowest Price in Supply Chain-超时](/Python3/1106.py)
+1107|并查集|[Social Clusters](/c++/1107.cpp)|[Social Clusters](/Python3/1107.py)

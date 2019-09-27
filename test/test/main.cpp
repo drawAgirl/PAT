@@ -18,86 +18,64 @@
 #include <string.h>
 using namespace std;
 
+const int MAXN = 1e3+10;
+int n,k,a;
+int father[MAXN];
+int course[MAXN];
+int root[MAXN];
 
-int n;
-
-typedef struct node{
-    int data;
-    int hegiht;
-    node* left;
-    node* right;
-    node(int num){
-        data = num;
-        hegiht = 1;
-        left = right = NULL;
+int findfather(int x){
+    int a = x;
+    while (x != father[x]) {
+        x = father[x];
     }
-}Node,*TreeNode;
-int getHeight(TreeNode root){
-    if (!root) return 0;
-    return root->hegiht;
-}
-int getBalanceFactor(TreeNode root){
-    return getHeight(root->left) -getHeight(root->right);
-}
-void updateHeight(TreeNode root){
-    root->hegiht = max(getHeight(root->left), getHeight(root->right))+1;
-}
-
-void L(TreeNode &root){
-    TreeNode temp = root->right;
-    root->right = temp->left;
-    temp->left = root;
-    updateHeight(root);
-    updateHeight(temp);
-    root = temp;
-}
-void R(TreeNode &root){
-    TreeNode temp = root->left;
-    root->left = temp->right;
-    temp->right = root;
-    updateHeight(root);
-    updateHeight(temp);
-    root = temp;
-}
-
-void insert(TreeNode &root,int data){
-    if(!root){
-        root = new Node(data);
-        return;
+    while (a != father[a]) {
+        int z = a;
+        a = father[a];
+        father[z] = x;
     }
-    if(data < root->data){
-        insert(root->left, data);
-        updateHeight(root);
-        if(getBalanceFactor(root) == 2){
-            if (getBalanceFactor(root->left) == 1) {
-                R(root);
-            }else if(getBalanceFactor(root->left) == -1){
-                L(root->left);
-                R(root);
-            }
-        }
-    }else{
-        insert(root->right, data);
-        updateHeight(root);
-        if(getBalanceFactor(root) == -2){
-            if (getBalanceFactor(root->right) == -1) {
-                L(root);
-            }else if(getBalanceFactor(root->right) == 1){
-                R(root->right);
-                L(root);
-            }
-        }
-    }
+    return x;
 }
 
+void Union(int a,int b){
+    int fa = findfather(a);
+    int fb = findfather(b);
+    if(fa != fb) father[fa] = fb;
+}
+
+void init(int n){
+    for(int i=1;i<=n;++i) father[i] = i;
+}
+
+bool cmp(int &a,int &b){
+    return a>b;
+}
 int main(){
     scanf("%d",&n);
-    TreeNode root = NULL;
-    for(int i=0;i<n;++i){
-        int t;
-        scanf("%d",&t);
-        insert(root, t);
-//        printf("%d ",root->data);
+    memset(course, 0, sizeof(course));
+    memset(root, 0, sizeof(root));
+    init(n);
+    for(int i=1;i<=n;++i){
+        scanf("%d:",&k);
+        for(int j=0;j<k;++j){
+            scanf("%d",&a);
+            if(course[a] == 0){
+                course[a] = i;
+            }
+            Union(i, course[a]);
+        }
     }
-    printf("%d\n",root->data);
+    for(int i=1;i<=n;++i) root[findfather(i)]++;
+    sort(root, root+MAXN, cmp);
+    int cnt = 0;
+    for(int i=0;i<=n;++i){
+        if(root[i] == 0) break;
+        cnt++;
+    }
+    printf("%d\n",cnt);
+    for(int i=0;i<cnt;++i){
+        printf("%d",root[i]);
+        if(i != cnt-1) printf(" ");
+    }
+    
 }
