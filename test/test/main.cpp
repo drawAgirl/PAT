@@ -18,42 +18,86 @@
 #include <string.h>
 using namespace std;
 
-const int MAXN = 110;
-unordered_map<int, vector<int>> tree;
-int n,lchild,rchild;
-int data[MAXN];
-int ind = 0;
 
+int n;
 
-void Inorder(int root){
-    if(tree[root][0] != -1) Inorder(tree[root][0]);
-    tree[root].push_back(data[ind++]);
-    if(tree[root][1] != -1) Inorder(tree[root][1]);
+typedef struct node{
+    int data;
+    int hegiht;
+    node* left;
+    node* right;
+    node(int num){
+        data = num;
+        hegiht = 1;
+        left = right = NULL;
+    }
+}Node,*TreeNode;
+int getHeight(TreeNode root){
+    if (!root) return 0;
+    return root->hegiht;
+}
+int getBalanceFactor(TreeNode root){
+    return getHeight(root->left) -getHeight(root->right);
+}
+void updateHeight(TreeNode root){
+    root->hegiht = max(getHeight(root->left), getHeight(root->right))+1;
+}
+
+void L(TreeNode &root){
+    TreeNode temp = root->right;
+    root->right = temp->left;
+    temp->left = root;
+    updateHeight(root);
+    updateHeight(temp);
+    root = temp;
+}
+void R(TreeNode &root){
+    TreeNode temp = root->left;
+    root->left = temp->right;
+    temp->right = root;
+    updateHeight(root);
+    updateHeight(temp);
+    root = temp;
+}
+
+void insert(TreeNode &root,int data){
+    if(!root){
+        root = new Node(data);
+        return;
+    }
+    if(data < root->data){
+        insert(root->left, data);
+        updateHeight(root);
+        if(getBalanceFactor(root) == 2){
+            if (getBalanceFactor(root->left) == 1) {
+                R(root);
+            }else if(getBalanceFactor(root->left) == -1){
+                L(root->left);
+                R(root);
+            }
+        }
+    }else{
+        insert(root->right, data);
+        updateHeight(root);
+        if(getBalanceFactor(root) == -2){
+            if (getBalanceFactor(root->right) == -1) {
+                L(root);
+            }else if(getBalanceFactor(root->right) == 1){
+                R(root->right);
+                L(root);
+            }
+        }
+    }
 }
 
 int main(){
     scanf("%d",&n);
+    TreeNode root = NULL;
     for(int i=0;i<n;++i){
-        scanf("%d%d",&lchild,&rchild);
-        tree[i].push_back(lchild);
-        tree[i].push_back(rchild);
+        int t;
+        scanf("%d",&t);
+        insert(root, t);
+//        printf("%d ",root->data);
     }
-    for(int i=0;i<n;++i) scanf("%d",&data[i]);
-    sort(data, data+n);
-    Inorder(0);
-    queue<int> q;
-    q.push(0);
-    int space = 0;
-    while (q.size()) {
-        int size = (int)q.size();
-        while (size--) {
-            int t = q.front();
-            q.pop();
-            space++;
-            printf("%d",tree[t][2]);
-            if(space != n) printf(" ");
-            if(tree[t][0] != -1) q.push(tree[t][0]);
-            if(tree[t][1] != -1) q.push(tree[t][1]);
-        }
-    }
+    printf("%d\n",root->data);
 }

@@ -36,6 +36,7 @@
 1062|排序|[Talent and Virtue](/c++/1062.cpp)|[Talent and Virtue-超时](/Python3/1062.py)
 1064|BST|[Complete Binary Search ](/c++/1064.cpp)|[Complete Binary Search ](/Python3/1064.py)
 1065|溢出|[A+B and C (64bit)](/c++/1065.cpp)|[A+B and C (64bit)](/Python3/1065.py)
+1066|AVL|[Root of AVL Tree](/c++/1066.cpp)|[Root of AVL Tree](/Python3/1066.py)
 1067|贪心排序|[Sort with Swap(0, i)](/c++/1067.cpp)|[Sort with Swap(0, i)-超时](/Python3/1067.py)
 1069|数学|[The Black Hole of Numbers](/c++/1069.cpp)|[The Black Hole of Numbers](/Python3/1069.py)
 1070|排序贪心|[Mooncake](/c++/1070.cpp)|[Mooncake](/Python3/1070.py)
