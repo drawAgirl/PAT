@@ -29,6 +29,7 @@
 1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
 1028|排序|[List Sorting](/c++/1028.cpp)|[List Sorting-超时](/Python3/1028.py)
 1029|双指针|[Median](/c++/1029.cpp)|[Median-超时](/Python3/1029.py)
+1030|最短路|[Travel Plan](/c++/1030.cpp)|[Travel Plan](/Python3/1030.py)
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1032|链表|[Sharing](/c++/1032.cpp)|[Sharing](/Python3/1032.py)
 1035|字符串处理|[Password](/c++/1035.cpp)|[Password](/Python3/1035.py)
