@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/9/23.
+//  Created by 李寻欢 on 2019/9/24.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -61,7 +61,4 @@ int main(){
         swap(v1[v2[var]], v1[var]);
         swap(v2[0], v2[var]);
     }
-    
-    
-}
-
+    s

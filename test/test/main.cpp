@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/9/27.
+//  Created by 李寻欢 on 2019/10/1.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -16,66 +16,90 @@
 #include <queue>
 #include <unordered_map>
 #include <string.h>
+#include <set>
 using namespace std;
 
-const int MAXN = 1e3+10;
-int n,k,a;
-int father[MAXN];
-int course[MAXN];
-int root[MAXN];
 
-int findfather(int x){
-    int a = x;
-    while (x != father[x]) {
-        x = father[x];
+
+struct bign {
+    int d[1000];
+    int len;
+    bign(){
+        memset(d, 0, sizeof(d));
+        len = 0;
     }
-    while (a != father[a]) {
-        int z = a;
-        a = father[a];
-        father[z] = x;
+};
+
+bign change(char c[]){
+    int len = strlen(c);
+    bign a;
+    for (int i=0; i<len; i++) {
+        a.d[i] = c[len-i-1] - '0' ;
+        a.len++;
     }
-    return x;
+    return a;
 }
 
-void Union(int a,int b){
-    int fa = findfather(a);
-    int fb = findfather(b);
-    if(fa != fb) father[fa] = fb;
+bign add(bign a,bign b){
+    int carry = 0;
+    int index = 0;
+    bign c;
+    for (int i=0; i<a.len; i++) {
+        int temp = a.d[i] + b.d[i] + carry;
+        c.d[index++] = temp % 10;
+        carry = temp / 10;
+        c.len++;
+    }
+    if (carry != 0) {
+        c.d[index++] = carry;
+        c.len++;
+    }
+    return c;
 }
 
-void init(int n){
-    for(int i=1;i<=n;++i) father[i] = i;
+bign Reverse(bign a){
+    bign b;
+    b.len = a.len;
+    for (int i=0; i<a.len; i++) {
+        b.d[i] = a.d[a.len-1-i];
+    }
+    return b;
 }
 
-bool cmp(int &a,int &b){
-    return a>b;
-}
-int main(){
-    scanf("%d",&n);
-    memset(course, 0, sizeof(course));
-    memset(root, 0, sizeof(root));
-    init(n);
-    for(int i=1;i<=n;++i){
-        scanf("%d:",&k);
-        for(int j=0;j<k;++j){
-            scanf("%d",&a);
-            if(course[a] == 0){
-                course[a] = i;
-            }
-            Union(i, course[a]);
+bool istrue(bign a){
+    for (int i=0; i<a.len/2; i++) {
+        if (a.d[i] != a.d[a.len-i-1]) {
+            return false;
         }
     }
-    for(int i=1;i<=n;++i) root[findfather(i)]++;
-    sort(root, root+MAXN, cmp);
-    int cnt = 0;
-    for(int i=0;i<=n;++i){
-        if(root[i] == 0) break;
-        cnt++;
+    return true;
+}
+
+void show(bign a){
+    for (int i=a.len-1; i>=0; i--) {
+        printf("%d",a.d[i]);
     }
-    printf("%d\n",cnt);
-    for(int i=0;i<cnt;++i){
-        printf("%d",root[i]);
-        if(i != cnt-1) printf(" ");
-    }
+    printf("\n");
+}
+
+int main(){
+    int k;
+    char n[1000];
+    scanf("%s%d",n,&k);
+    bign a = change(n);
     
+    int count = 0;
+    while (count < k) {
+        if (istrue(a)) {
+            show(a);
+            printf("%d",count);
+            return 0;
+        }else{
+            count++;
+            bign b = Reverse(a);
+            a = add(a, b);
+        }
+    }
+    show(a);
+    printf("%d",count);
 }

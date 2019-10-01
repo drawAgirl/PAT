@@ -20,6 +20,6 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    string = "test";
-    cout << s.substr(1);
+    string a = "Test";
+    cout << a;
 }

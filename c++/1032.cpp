@@ -50,7 +50,5 @@ int main(){
         b = Node[b].next;
     }
     printf("-1");
-    
-    
 }
 
