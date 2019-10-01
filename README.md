@@ -1,7 +1,7 @@
 # PAT
 **记录一下我刷PAT的经历，参考了晴神和柳神的题解**
 由于Python3本身的原因还有我太菜了，部分题Python3有1，2个测试点超时，如果有不超时的解法也希望能分享一下
-还有一些题目好像是几个测试点输入情况不同，导致Python一些测试点非0返回。
+
 
 
 题号|知识点|<center>C++</center>|Python3
@@ -22,11 +22,13 @@
 1015|素数|[Reversible Primes](/c++/1015.cpp)|[Reversible Primes](/Python3/1015.py)
 1019|进制转换|[General Palindromic Number](/c++/1019.cpp)|[General Palindromic Number](/Python3/1019.py)
 1020|二叉树遍历|[Tree Traversals](/c++/1020.cpp)|[Tree Traversals](/Python3/1020.py)
-1020|排序|[Digital Library](/c++/1022.cpp)|[Digital Library](/Python3/1022.py)
+1022|排序|[Digital Library](/c++/1022.cpp)|[Digital Library](/Python3/1022.py)
 1023|数学|[Have Fun with Numbers](/c++/1023.cpp)|[Have Fun with Numbers](/Python3/1023.py)
 1024|数学|[Palindromic Number](/c++/1024.cpp)|[Palindromic Number](/Python3/1024.py)
 1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|
 1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
+1028|排序|[List Sorting](/c++/1028.cpp)|[List Sorting-超时](/Python3/1028.py)
+1029|双指针|[Median](/c++/1029.cpp)|[Median-超时](/Python3/1029.py)
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1032|链表|[Sharing](/c++/1032.cpp)|[Sharing](/Python3/1032.py)
 1035|字符串处理|[Password](/c++/1035.cpp)|[Password](/Python3/1035.py)

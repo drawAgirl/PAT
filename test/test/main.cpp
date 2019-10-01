@@ -19,87 +19,28 @@
 #include <set>
 using namespace std;
 
+const int MAXN = 2e5+10;
+int n,m;
+long long arr1[MAXN];
+long long arr2[MAXN];
 
 
-struct bign {
-    int d[1000];
-    int len;
-    bign(){
-        memset(d, 0, sizeof(d));
-        len = 0;
-    }
-};
-
-bign change(char c[]){
-    int len = strlen(c);
-    bign a;
-    for (int i=0; i<len; i++) {
-        a.d[i] = c[len-i-1] - '0' ;
-        a.len++;
-    }
-    return a;
-}
-
-bign add(bign a,bign b){
-    int carry = 0;
-    int index = 0;
-    bign c;
-    for (int i=0; i<a.len; i++) {
-        int temp = a.d[i] + b.d[i] + carry;
-        c.d[index++] = temp % 10;
-        carry = temp / 10;
-        c.len++;
-    }
-    if (carry != 0) {
-        c.d[index++] = carry;
-        c.len++;
-    }
-    return c;
-}
-
-bign Reverse(bign a){
-    bign b;
-    b.len = a.len;
-    for (int i=0; i<a.len; i++) {
-        b.d[i] = a.d[a.len-1-i];
-    }
-    return b;
-}
-
-bool istrue(bign a){
-    for (int i=0; i<a.len/2; i++) {
-        if (a.d[i] != a.d[a.len-i-1]) {
-            return false;
-        }
-    }
-    return true;
-}
-
-void show(bign a){
-    for (int i=a.len-1; i>=0; i--) {
-        printf("%d",a.d[i]);
-    }
-    printf("\n");
-}
 
 int main(){
-    int k;
-    char n[1000];
-    scanf("%s%d",n,&k);
-    bign a = change(n);
-    
-    int count = 0;
-    while (count < k) {
-        if (istrue(a)) {
-            show(a);
-            printf("%d",count);
-            return 0;
-        }else{
-            count++;
-            bign b = Reverse(a);
-            a = add(a, b);
-        }
+    scanf("%d",&n);
+    for(int i=0;i<n;++i) scanf("%lld",&arr1[i]);
+    scanf("%d",&m);
+    for(int i=0;i<m;++i) scanf("%lld",&arr2[i]);
+    arr1[n]=arr2[m] = 0x7fffffff;
+    int mid = (n+m-1)>>1;
+    int index = 0;
+    int i=0,j=0;
+    while (index <mid) {
+        if(arr1[i]<arr2[j]) i++;
+        else j++;
+        index++;
     }
-    show(a);
-    printf("%d",count);
+    if(arr1[i] <arr2[j]) printf("%lld",arr1[i]);
+    else printf("%lld",arr2[j]);
 }
+
