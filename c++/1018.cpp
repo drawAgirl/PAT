@@ -37,7 +37,7 @@ void dfs(int v){
         temppath.push_back(v);
         int need = 0;
         int remain = 0;
-        for(int i=(int)temppath.size()-1;i>=0;i--){
+        for(int i=temppath.size()-1;i>=0;i--){
             int id = temppath[i];
             if(station[id] > 0){
                 remain += station[id];
@@ -65,7 +65,7 @@ void dfs(int v){
     for(int i=0;i<pre[v].size();i++){
         dfs(pre[v][i]);
     }
-    temppath.pop_back();
+   temppath.pop_back();
 }
 void Dijkstra(){
     fill(d, d+MAXN, INF);
