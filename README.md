@@ -33,6 +33,7 @@
 1030|最短路|[Travel Plan](/c++/1030.cpp)|[Travel Plan](/Python3/1030.py)
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1032|链表|[Sharing](/c++/1032.cpp)|[Sharing](/Python3/1032.py)
+1034|DFS|[Head of a Gang](/c++/1034.cpp)|[Head of a Gang](/c++/1034.cpp)
 1035|字符串处理|[Password](/c++/1035.cpp)|[Password](/Python3/1035.py)
 1036|排序查找|[Boys vs Girls](/c++/1036.cpp)|[Boys vs Girls](/Python3/1036.py)
 1037|贪心排序|[Magic Coupon](/c++/1037.cpp)|[Magic Coupon](/Python3/1037.py)
