@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/10/1.
+//  Created by 李寻欢 on 2019/10/3.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -18,75 +18,44 @@
 #include <string.h>
 #include <set>
 using namespace std;
-
 const int INF = 0x3f3f3f3f;
-const int MAXN = 510;
-int c,n,s,m;
-int station[MAXN];
+const int MAXN = 1100;
+int n,m,k,dis;
+int idx = 0;
 typedef pair<int, int> pp;
 vector<pp> g[MAXN];
-bool vis[MAXN] = {false};
+bool vis[MAXN];
 int d[MAXN];
-vector<int> pre[MAXN];
-vector<int> path,temppath;
-int minneed = INF;
-int minremain = INF;
 
-void dfs(int v){
-    if(v == 0){
-        temppath.push_back(v);
-        int need = 0;
-        int remain = 0;
-        for(int i=(int)temppath.size()-1;i>=0;i--){
-            int id = temppath[i];
-            if(station[id] > 0){
-                remain += station[id];
-            }else{
-                if(remain > abs(station[id]))
-                    remain -= abs(station[id]);
-                else{
-                    need += abs(station[id])-remain;
-                    remain = 0;
-                }
-            }
-        }
-        if(need < minneed){
-            minneed = need;
-            minremain = remain;
-            path = temppath;
-        }else if(need == minneed && remain < minremain){
-            minremain = remain;
-            path = temppath;
-        }
-        temppath.pop_back();
-        return;
+int to_int(string a){
+    int ans = 0;
+    if(a[0] == 'G'){
+        for(int i=1;i<(int)a.size();++i) ans=ans*10+ a[i]-'0';
+    }else{
+        for(int i=0;i<(int)a.size();++i) ans=ans*10+ a[i]-'0';
     }
-    temppath.push_back(v);
-    for(int i=0;i<pre[v].size();i++){
-        dfs(pre[v][i]);
-    }
-    temppath.pop_back();
+    if(a[0] == 'G')
+        return n+ans;
+    return ans;
 }
-void Dijkstra(){
+
+
+void Dijkstra(int s){
+    fill(vis, vis+MAXN, false);
     fill(d, d+MAXN, INF);
-    d[0] = 0;
+    d[s] = 0;
     priority_queue<pp,vector<pp>,greater<pp>> q;
-    q.push({0,0});
+    q.push({0,s});
     while (q.size()) {
         pp cur = q.top();
         q.pop();
-        if(vis[cur.second]) continue;
+        if (vis[cur.second]) continue;
         vis[cur.second] = true;
-        for(int i=0;i<g[cur.second].size();++i){
-            int dis = g[cur.second][i].first;
+        for(int i=0;i<(int)g[cur.second].size();++i){
             int to = g[cur.second][i].second;
-            if(vis[to]==false && dis+cur.first < d[to]){
+            int dis = g[cur.second][i].first;
+            if(vis[to] == false && dis+cur.first < d[to]){
                 d[to] = dis+cur.first;
-                pre[to].clear();
-                pre[to].push_back(cur.second);
-                q.push({d[to],to});
-            }else if (vis[to]== false && dis+cur.first == d[to]){
-                pre[to].push_back(cur.second);
                 q.push({d[to],to});
             }
         }
@@ -94,25 +63,48 @@ void Dijkstra(){
 }
 
 int main(){
-    scanf("%d%d%d%d",&c,&n,&s,&m);
-    for(int i=1;i<=n;++i){
-        scanf("%d",&station[i]);
-        station[i] -= c/2;
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cin >> n >> m >> k >> dis;
+    string a,b;
+    int c;
+    int x,y;
+    for(int i=0;i<k;++i){
+        cin >> a >> b >> c;
+        x = to_int(a);
+        y = to_int(b);
+        g[x].push_back({c,y});
+        g[y].push_back({c,x});
     }
-    for(int i=0;i<m;++i){
-        int x,y,z;
-        scanf("%d%d%d",&x,&y,&z);
-        g[x].push_back({z,y});
-        g[y].push_back({z,x});
+    int ans_index = -1;
+    int min_dis = -INF;
+    double min_average = INF;
+    for(int i=n+1;i<=n+m;++i){
+        Dijkstra(i);
+        double total = 0;
+        int cur_min = INF;
+        int cur_max = -INF;
+        for(int j=1;j<=n;++j){
+            total += 1.0*d[j]/n;
+            cur_max = max(cur_max,d[j]);
+            cur_min = min(cur_min,d[j]); //找到当前加油站离所有村庄最小的距离
+        }
+        if(cur_max>dis)continue; // 如果大于极限距离就下一个
+        if(min_dis < cur_min){ //找到最小距离中最大的距离
+            ans_index = i;
+            min_dis = cur_min;
+            min_average = total;
+        }else if (min_dis == cur_min){
+//            double now = 1.0*total/n;
+            if(total < min_average){
+                ans_index = i;
+                min_average = total;
+            }
+        }
     }
-    Dijkstra();
-    path.push_back(s);
-    dfs(s);
-    printf("%d ",minneed);
-    for(int i=(int)path.size()-1;i>=0;--i){
-        printf("%d",path[i]);
-        if(i>0)printf("->");
+    if(ans_index == -1) printf("No Solution\n");
+    else{
+        printf("G%d\n",ans_index-n);
+        printf("%.1f %.1f",1.0*min_dis,min_average+0.005);
     }
-    printf(" %d",minremain);
-
 }
