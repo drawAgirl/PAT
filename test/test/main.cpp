@@ -18,30 +18,25 @@
 #include <string.h>
 #include <set>
 using namespace std;
+
+const int MAXN = 210;
 const int INF = 0x3f3f3f3f;
-const int MAXN = 1100;
-int n,m,k,dis;
-int idx = 0;
+int n,m,happy;
+int ind = 0;
+string start;
+unordered_map<string, int> string_to_int;
+unordered_map<int, string> back_to_string;
+int dic[MAXN];
 typedef pair<int, int> pp;
 vector<pp> g[MAXN];
-bool vis[MAXN];
+bool vis[MAXN] = { false};
 int d[MAXN];
-
-int to_int(string a){
-    int ans = 0;
-    if(a[0] == 'G'){
-        for(int i=1;i<(int)a.size();++i) ans=ans*10+ a[i]-'0';
-    }else{
-        for(int i=0;i<(int)a.size();++i) ans=ans*10+ a[i]-'0';
-    }
-    if(a[0] == 'G')
-        return n+ans;
-    return ans;
-}
-
-
-void Dijkstra(int s){
-    fill(vis, vis+MAXN, false);
+vector<int> pre[MAXN];
+vector<int> path,tempPath;
+int max_happy = 0;
+double average_happy = 0.0;
+int cnt = 0;
+void dijkstra(int s){
     fill(d, d+MAXN, INF);
     d[s] = 0;
     priority_queue<pp,vector<pp>,greater<pp>> q;
@@ -54,57 +49,70 @@ void Dijkstra(int s){
         for(int i=0;i<(int)g[cur.second].size();++i){
             int to = g[cur.second][i].second;
             int dis = g[cur.second][i].first;
-            if(vis[to] == false && dis+cur.first < d[to]){
+            if(vis[to]== false && dis+cur.first < d[to]){
                 d[to] = dis+cur.first;
+                pre[to].clear();
+                pre[to].push_back(cur.second);
+                q.push({d[to],to});
+            }else if (vis[to] == false && dis+cur.first == d[to]){
+                pre[to].push_back(cur.second);
                 q.push({d[to],to});
             }
         }
     }
 }
 
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    cin >> n >> m >> k >> dis;
-    string a,b;
-    int c;
-    int x,y;
-    for(int i=0;i<k;++i){
-        cin >> a >> b >> c;
-        x = to_int(a);
-        y = to_int(b);
-        g[x].push_back({c,y});
-        g[y].push_back({c,x});
-    }
-    int ans_index = -1;
-    int min_dis = -INF;
-    double min_average = INF;
-    for(int i=n+1;i<=n+m;++i){
-        Dijkstra(i);
-        double total = 0;
-        int cur_min = INF;
-        int cur_max = -INF;
-        for(int j=1;j<=n;++j){
-            total += 1.0*d[j]/n;
-            cur_max = max(cur_max,d[j]);
-            cur_min = min(cur_min,d[j]); //找到当前加油站离所有村庄最小的距离
-        }
-        if(cur_max>dis)continue; // 如果大于极限距离就下一个
-        if(min_dis < cur_min){ //找到最小距离中最大的距离
-            ans_index = i;
-            min_dis = cur_min;
-            min_average = total;
-        }else if (min_dis == cur_min){
-//            double now = 1.0*total/n;
-            if(total < min_average){
-                ans_index = i;
-                min_average = total;
+
+void dfs(int s){
+    if(s == 0){
+        cnt++;
+        int cur = 0;
+        for(auto each:tempPath) cur+=dic[each];
+        if(cur > max_happy){
+            max_happy = cur;
+            average_happy = 1.0*max_happy/(int)tempPath.size();
+            path = tempPath;
+        }else if(cur == max_happy){
+            if(average_happy < 1.0*cur/(int)tempPath.size()){
+                average_happy = 1.0*cur/(int)tempPath.size();
+                path = tempPath;
             }
         }
+        return;
     }
-    if(ans_index == -1) printf("No Solution\n");
-    else{
-        printf("G%d\n",ans_index-n);
-        printf("%.1f %.1f",1.0*min_dis,min_average+0.005);
+    tempPath.push_back(s);
+    for(auto each:pre[s]) dfs(each);
+    tempPath.pop_back();
+}
+
+int main(){
+//    ios::sync_with_stdio(false); 这题真的佛了，bug找了半个小时 把同步关了就通过。
+//    cin.tie(0);
+    cin >> n >> m >> start;
+    string_to_int[start] = ind;
+    back_to_string[ind++] = start;
+    string cur;
+    for(int i=1;i<n;++i){
+        cin >> cur >> happy;
+        string_to_int[cur] = ind;
+        dic[ind] = happy;
+        back_to_string[ind++] = cur;
+    }
+    string a,b;
+    int dis;
+    for(int i=0;i<m;++i){
+        cin >> a >>b >> dis;
+        g[string_to_int[a]].push_back({dis,string_to_int[b]});
+        g[string_to_int[b]].push_back({dis,string_to_int[a]});
+    }
+    int destination = string_to_int["ROM"];
+    dijkstra(0);
+    dfs(destination);
+    path.push_back(0);
+    printf("%d %d %d %d\n",cnt,d[destination],max_happy,(int)average_happy);
+    for(int i=(int)path.size()-1;i>=0;--i){
+        cout << back_to_string[path[i]];
+        if(i) cout <<"->";
     }
 }
+

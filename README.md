@@ -63,6 +63,7 @@
 1084|哈希|[Broken Keyboard](/c++/1084.cpp)|[Broken Keyboard](/Python3/1084.py)
 1085|二分查找|[Perfect Sequence](/c++/1085.cpp)|[Perfect Sequence-超时](/Python3/1085.py)
 1086|二叉树遍历|[Tree Traversals Again](/c++/1086.cpp)|[Tree Traversals Again](/Python3/1086.py)
+1087|最短路|[All Roads Lead to Rome](/c++/1087.cpp)|[All Roads Lead to Rome](/Python3/1087.py)
 1090|二叉树遍历|[Highest Price in Supply Chain](/c++/1090.cpp)|[Highest Price in Supply Chain-超时](/Python3/1090.py)
 1094|树的遍历|[The Largest Generation](/c++/1094.cpp)|[The Largest Generation](/Python3/1094.py)
 1097|链表|[Deduplication on a Linked List](/c++/1097.cpp)|[Deduplication on a Linked List-超时](/Python3/1097.py)
