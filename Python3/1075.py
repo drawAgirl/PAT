@@ -1,10 +1,7 @@
 from operator import attrgetter
 n,k,m = map(int,input().split())
 score = list(map(int,input().split()))
-#0 1:k+1 k+2 = flag, k+3 = perfect ,k+4 =total
-dic = {i:None for i in range(1,n+1)} #[0] = id,[-1] = total [-2] = perfect [-3] = flag
-check = {i:False for i in range(1,n+1)}
-
+dic = {i:None for i in range(1,n+1)}
 class node:
     def __init__(self,id):
         self.id = id
@@ -13,8 +10,6 @@ class node:
         self.perfect = 0
         self.total = 0
         self.rank = 0
-
-
 for _ in range(m):
     id,problem,grades = map(int,input().split())
     cur = node(id)
@@ -26,9 +21,7 @@ for _ in range(m):
     dic[id].score[problem] = max(dic[id].score[problem],grades)
 ans = []
 for key,values in dic.items():
-    if values is None:
-        continue
-    if values.flag == False:
+    if values is None or values.flag == False:
         continue
     for i in range(1,k+1):
         if values.score[i] >0:
