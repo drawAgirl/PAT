@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/10/9.
+//  Created by 李寻欢 on 2019/10/10.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -18,69 +18,79 @@
 #include <string.h>
 #include <set>
 using namespace std;
-const int MAXN =1e4+10;
-int n,k,m,id,problem,grades;
-int score[6];
-
+const int MAXN = 4e4+10;
+int n,m,k;
+int school;
+int quota[110];
 struct node{
-    int id;
-    int score[6];
-    int total = 0;
-    int perfect = 0;
+    int exam;
+    int view;
+    double total;
     int rank;
-    bool flag = false;
-    node(){
-        fill(score, score+6, -2);
-    }
-}people[MAXN];
+    int id;
+    vector<int> school;
+}Node[MAXN];
+
 
 bool cmp(node &a,node &b){
-    if(a.flag != b.flag) return a.flag > b.flag;
-    else if (a.total != b.total) return a.total > b.total;
-    else if (a.perfect != b.perfect) return a.perfect > b.perfect;
-    return a.id < b.id;
+    if(a.total != b.total) return a.total > b.total;
+    return a.exam > b.exam;
 }
 
-
 int main(){
-    scanf("%d%d%d",&n,&k,&m);
-    for(int i=1;i<=k;++i) scanf("%d",&score[i]);
-    for(int i=0;i<m;++i){
-        scanf("%d%d%d",&id,&problem,&grades);
-        people[id].id = id;
-        if(grades > -1) people[id].flag = true;
-        people[id].score[problem] = max(people[id].score[problem],grades);
+    scanf("%d%d%d",&n,&m,&k);
+    for(int i=0;i<m;++i) scanf("%d",&quota[i]);
+    for(int i=0;i<n;++i){
+        scanf("%d%d",&Node[i].exam,&Node[i].view);
+        Node[i].id = i;
+        Node[i].total = (Node[i].exam + Node[i].view)/2;
+        for(int j=0;j<k;++j){
+            scanf("%d",&school);
+            Node[i].school.push_back(school);
+        }
     }
-    int cnt = 0;
-    for(int i=1;i<=n;++i){
-        if(people[i].flag){
-            cnt++;
-            for(int j=1;j<=k;++j){
-                if(people[i].score[j]>0){
-                    people[i].total += people[i].score[j];
-                    if(people[i].score[j] == score[j]) people[i].perfect++;
+    sort(Node, Node+n, cmp);
+    int rank = 1;
+    Node[0].rank = rank++;
+    map<int, vector<int>> dic;
+    for(int i=1;i<n;++i){
+        if(Node[i].total != Node[i-1].total) Node[i].rank = rank;
+        else{
+            if(Node[i].exam != Node[i-1].exam) Node[i].rank = rank;
+            else Node[i].rank = Node[i-1].rank;
+        }
+        rank++;
+    }
+    rank = 1;
+    int pre[110] = {0};//比较排名是否相同
+    dic[Node[0].school[0]].push_back(Node[0].id);
+    quota[Node[0].school[0]]--;
+    pre[Node[0].school[0]] = Node[0].rank;
+    for(int i=1;i<n;++i){
+        for(auto &want:Node[i].school){
+            if(quota[want] > 0){
+                quota[want]--;
+                dic[want].push_back(Node[i].id);
+                pre[want] = max(pre[want],Node[i].rank);
+                break;
+            }else{
+                if(pre[want] == Node[i].rank){
+                    quota[want]--;
+                    dic[want].push_back(Node[i].id);
+                    break;
                 }
             }
         }
+        
     }
-    sort(people, people+MAXN, cmp);
-    int rank = 1;
-    people[0].rank = rank++;
-    for(int i=1;i<n;++i){
-        if(people[i].flag == false) continue;
-        if(people[i].total == people[i-1].total) people[i].rank = people[i-1].rank;
-        else people[i].rank = rank;
-        rank++;
+    for(int i=0;i<m;++i){
+        if(dic[i].size() != 0){
+            sort(dic[i].begin(), dic[i].end());
+            for(int j=0;j<(int)dic[i].size();++j){
+                printf("%d",dic[i][j]);
+                if(j != (int)dic[i].size()-1) printf(" ");
+                else printf("\n");
+            }
+        }else printf("\n");
     }
-    for(int i=0;i<cnt;++i){
-        printf("%d %05d %d",people[i].rank,people[i].id,people[i].total);
-        for(int j=1;j<=k;++j){
-            if(people[i].score[j] >=0) printf(" %d",people[i].score[j]);
-            else if (people[i].score[j] == -1) printf(" 0");
-            else printf(" -");
-        }
-        printf("\n");
-    }
-    
-    
 }
