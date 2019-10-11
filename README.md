@@ -1,6 +1,7 @@
 # PAT
 **记录一下我刷PAT的经历，参考了晴神和柳神的题解**
-由于Python3本身的原因还有我太菜了，部分题Python3有1，2个测试点超时，如果有不超时的解法也希望能分享一下
+
+由于Python3本身的原因(还有我太菜了)，部分题Python3有1，2个测试点超时，如果有不超时的解法也希望能分享一下
 
 
 
@@ -26,7 +27,7 @@
 1022|排序|[Digital Library](/c++/1022.cpp)|[Digital Library](/Python3/1022.py)
 1023|数学|[Have Fun with Numbers](/c++/1023.cpp)|[Have Fun with Numbers](/Python3/1023.py)
 1024|数学|[Palindromic Number](/c++/1024.cpp)|[Palindromic Number](/Python3/1024.py)
-1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|
+1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|[PAT Ranking-超时](/c++/1025.py)
 1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
 1028|排序|[List Sorting](/c++/1028.cpp)|[List Sorting-超时](/Python3/1028.py)
 1029|双指针|[Median](/c++/1029.cpp)|[Median-超时](/Python3/1029.py)
@@ -88,8 +89,11 @@
 1090|二叉树遍历|[Highest Price in Supply Chain](/c++/1090.cpp)|[Highest Price in Supply Chain-超时](/Python3/1090.py)
 1091|BFS|[Acute Stroke](/c++/1091.cpp)|[Acute Stroke-超时](/Python3/1091.py)
 1094|树的遍历|[The Largest Generation](/c++/1094.cpp)|[The Largest Generation](/Python3/1094.py)
+1096|数学|[Consecutive Factors](/c++/1096.cpp)|[Consecutive Factors](/Python3/1096.py)
 1097|链表|[Deduplication on a Linked List](/c++/1097.cpp)|[Deduplication on a Linked List-超时](/Python3/1097.py)
+1098|排序|[Insertion or Heap Sort](/c++/1098.cpp)|[Insertion or Heap Sort](/Python3/1098.py)
 1099|BST|[Build A Binary Search Tree](/c++/1099.cpp)|[Build A Binary Search Tree](/Python3/1099.py)
+1100|进制转换|[Mars Numbers](/c++/1100.cpp)|[Mars Numbers](/Python3/1100.py)
 1102|二叉树遍历|[Invert a Binary Tree](/c++/1102.cpp)|[Invert a Binary Tree](/Python3/1102.py)
 1106|树的遍历|[Lowest Price in Supply Chain](/c++/1106.cpp)|[Lowest Price in Supply Chain-超时](/Python3/1106.py)
 1107|并查集|[Social Clusters](/c++/1107.cpp)|[Social Clusters](/Python3/1107.py)

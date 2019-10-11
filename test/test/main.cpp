@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/10/10.
+//  Created by 李寻欢 on 2019/10/11.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -18,79 +18,59 @@
 #include <string.h>
 #include <set>
 using namespace std;
-const int MAXN = 4e4+10;
-int n,m,k;
-int school;
-int quota[110];
-struct node{
-    int exam;
-    int view;
-    double total;
-    int rank;
-    int id;
-    vector<int> school;
-}Node[MAXN];
-
-
-bool cmp(node &a,node &b){
-    if(a.total != b.total) return a.total > b.total;
-    return a.exam > b.exam;
+int n;
+string earths[] = {"tret","jan","feb", "mar", "apr", "may", "jun", "jly", "aug", "sep", "oct", "nov","dec"};
+string mars[] = {"","tam", "hel", "maa", "huh", "tou", "kes", "hei", "elo", "syy", "lok", "mer", "jou"};
+int to_int(string s){
+    int ans =0;
+    for(int i=0;i<(int)s.size();++i){
+        ans = ans*10 + s[i]-'0';
+    }
+    return ans;
 }
-
 int main(){
-    scanf("%d%d%d",&n,&m,&k);
-    for(int i=0;i<m;++i) scanf("%d",&quota[i]);
-    for(int i=0;i<n;++i){
-        scanf("%d%d",&Node[i].exam,&Node[i].view);
-        Node[i].id = i;
-        Node[i].total = (Node[i].exam + Node[i].view)/2;
-        for(int j=0;j<k;++j){
-            scanf("%d",&school);
-            Node[i].school.push_back(school);
-        }
-    }
-    sort(Node, Node+n, cmp);
-    int rank = 1;
-    Node[0].rank = rank++;
-    map<int, vector<int>> dic;
-    for(int i=1;i<n;++i){
-        if(Node[i].total != Node[i-1].total) Node[i].rank = rank;
-        else{
-            if(Node[i].exam != Node[i-1].exam) Node[i].rank = rank;
-            else Node[i].rank = Node[i-1].rank;
-        }
-        rank++;
-    }
-    rank = 1;
-    int pre[110] = {0};//比较排名是否相同
-    dic[Node[0].school[0]].push_back(Node[0].id);
-    quota[Node[0].school[0]]--;
-    pre[Node[0].school[0]] = Node[0].rank;
-    for(int i=1;i<n;++i){
-        for(auto &want:Node[i].school){
-            if(quota[want] > 0){
-                quota[want]--;
-                dic[want].push_back(Node[i].id);
-                pre[want] = max(pre[want],Node[i].rank);
-                break;
+    string s;
+    scanf("%d%*c",&n);
+    while (n--) {
+        getline(cin,s);
+        if(s[0]>='0' && s[0] <='9'){
+            int cur = to_int(s);
+            if(cur >= 13){
+                int d = cur % 13;
+                cur/= 13;
+                cout << mars[cur];
+                if(d!=0) cout << " " << earths[d]<<"\n";
+                else cout <<"\n";
+                
             }else{
-                if(pre[want] == Node[i].rank){
-                    quota[want]--;
-                    dic[want].push_back(Node[i].id);
-                    break;
+                cout << earths[cur] <<"\n";
+            }
+        }else{
+            if(s.size() <= 4){
+                for(int i=0;i<13;++i){
+                    if(earths[i] == s){
+                        printf("%d\n",i);
+                        break;
+                    }
                 }
+                for(int i=1;i<13;++i){
+                    if(mars[i] == s){
+                        printf("%d\n",i*13);
+                        break;
+                    }
+                }
+            }else{
+                string d = s.substr(0,3);
+                string e = s.substr(4,4);
+                int i,j;
+                for(i=0;i<13;++i){
+                    if(mars[i] == d) break;
+                }
+                for(j=0;j<13;++j){
+                    if(earths[j] == e) break;
+                }
+                printf("%d\n",13*i+j);
             }
         }
-        
-    }
-    for(int i=0;i<m;++i){
-        if(dic[i].size() != 0){
-            sort(dic[i].begin(), dic[i].end());
-            for(int j=0;j<(int)dic[i].size();++j){
-                printf("%d",dic[i][j]);
-                if(j != (int)dic[i].size()-1) printf(" ");
-                else printf("\n");
-            }
-        }else printf("\n");
     }
 }
