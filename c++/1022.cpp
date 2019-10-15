@@ -1,3 +1,4 @@
+
 //
 //  main.cpp
 //  test
@@ -64,4 +65,3 @@ int main(){
         else query(year, a);
     }
 }
-

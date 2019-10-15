@@ -113,3 +113,6 @@
 1117|数学|[Eddington Number ](/c++/1117.cpp)|[Eddington Number ](/Python3/1117.py)
 1118|并查集|[Birds in Forest ](/c++/1118.cpp)|[Birds in Forest ](/Python3/1118.py)
 1119|树的遍历|[Pre- and Post-order Traversals ](/c++/1119.cpp)|[Pre- and Post-order Traversals ](/Python3/1119.py)
+1120|数学|[Friend Numbers ](/c++/1120.cpp)|[Friend Numbers ](/Python3/1120.py)
+1121|查找|[Damn Single ](/c++/1121.cpp)|[Damn Single](/Python3/1121.py)
+1122|判断|[Hamiltonian Cycle ](/c++/1122.cpp)|[Hamiltonian Cycle](/Python3/1122.py)
