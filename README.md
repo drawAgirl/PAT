@@ -116,3 +116,4 @@
 1120|数学|[Friend Numbers ](/c++/1120.cpp)|[Friend Numbers ](/Python3/1120.py)
 1121|查找|[Damn Single ](/c++/1121.cpp)|[Damn Single](/Python3/1121.py)
 1122|判断|[Hamiltonian Cycle ](/c++/1122.cpp)|[Hamiltonian Cycle](/Python3/1122.py)
+1123|AVL|[Is It a Complete AVL Tree ](/c++/1123.cpp)|[Is It a Complete AVL Tree-23分](/Python3/1123.py)
