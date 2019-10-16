@@ -117,3 +117,11 @@
 1121|查找|[Damn Single ](/c++/1121.cpp)|[Damn Single](/Python3/1121.py)
 1122|判断|[Hamiltonian Cycle ](/c++/1122.cpp)|[Hamiltonian Cycle](/Python3/1122.py)
 1123|AVL|[Is It a Complete AVL Tree ](/c++/1123.cpp)|[Is It a Complete AVL Tree-23分](/Python3/1123.py)
+1124|简单模拟|[Raffle for Weibo Followers ](/c++/1124.cpp)|[Raffle for Weibo Followers](/Python3/1124.py)
+1125|简单模拟|[Chain the Ropes ](/c++/1125.cpp)|[Chain the Ropes](/Python3/1125.py)
+1126|欧拉回路|[Eulerian Path](/c++/1126.cpp)|[Eulerian Path](/Python3/1126.py)
+1127|树的构造|[ZigZagging on a Tree ](/c++/1127.cpp)|[ZigZagging on a Tree](/Python3/1127.py)
+1128|简单判断|[N Queens Puzzle ](/c++/1128.cpp)|[N Queens Puzzle-超时](/Python3/1128.py)
+1129|排序|[Recommendation System ](/c++/1129.cpp)|[Recommendation System](/Python3/1129.py)
+1130|树的遍历|[Infix Expression ](/c++/1130.cpp)|[Infix Expression](/Python3/1130.py)
+1131|DFS+剪枝|[Subway Map ](/c++/1131.cpp)|
