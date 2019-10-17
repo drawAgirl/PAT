@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/10/16.
+//  Created by 李寻欢 on 2019/10/17.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -20,93 +20,61 @@
 #include <set>
 #include <deque>
 using namespace std;
+const int MAXN = 1000;
+int k,n;
+int tree[MAXN];
+bool used[MAXN] = {false};
+void insert(int root,int val){
+    if(root > MAXN) return;
+    if(used[root] == false){
+        used[root] = true;
+        tree[root] = val;
+        return;
+    }
+    if(abs(tree[root]) < abs(val)) insert(2*root+1, val);
+    else insert(2*root, val);
+}
 
-int n,m,k;
-int start,destination,next_station;
-unordered_map<int, vector<int>> graph;
-int g[10000][10000] = {0};
-unordered_map<int, vector<int>> foot;
-bool vis[10000] = {false};
-vector<int> best_line;
-vector<int> path;
-vector<int> best_path;
-vector<int> trans_node;
-vector<int> best_trans;
-void dfs(int s,int step,int &min_step,int trans,int &min_trans,int pre_line,vector<int> lines){
-    if(vis[s] == true || step > min_step) return;
-    if(s == destination){
-        if(min_step > step){
-            min_step = step;
-            best_line = lines;
-            min_trans = trans;
-            best_path = path;
-            best_trans = trans_node;
-        }
-        else if(min_step == step){
-            if(trans < min_trans){
-                min_trans = trans;
-                best_line = lines;
-                best_path = path;
-                best_trans = trans_node;
-            }
+
+void dfs(int root,int &black,vector<int> cur,bool &flag){
+    if(!used[root]){ //叶子结点
+        if(black == -1) black = (int)cur.size();
+        if(black != cur.size()){
+            flag = false;
+            return;
         }
         return;
     }
-    vis[s] = true;
-    path.emplace_back(s);
-    for(auto &each:graph[s]){
-        int back_up_line = pre_line;
-        int cur_line = g[s][each];
-        bool flag = false;
-        if(pre_line != cur_line){
-            flag = true;
-            trans_node.emplace_back(s);
-            lines.push_back(cur_line);
-            pre_line = cur_line;
-            trans++;
-        }
-        dfs(each, step+1,min_step,trans,min_trans,pre_line,lines);
-        if(flag){
-            lines.pop_back();
-            trans--;
-            pre_line = back_up_line;
-            trans_node.pop_back();
-        }
+    if(tree[root] > 0) cur.emplace_back(root);
+    else{
+        if(used[2*root] && tree[2*root] < 0) flag = false;
+        if(used[2*root+1] && tree[2*root+1] < 0 ) flag = false;
+        if(!flag) return;
     }
-    vis[s] = false;
-    path.pop_back();
+    dfs(2*root, black, cur, flag);
+    dfs(2*root+1, black, cur, flag);
 }
 
 int main(){
-    scanf("%d",&n);
-    for(int i=1;i<=n;++i){
-        scanf("%d%d",&m,&start);
-        for(int j=1;j<m;++j){
-            scanf("%d",&next_station);
-            g[start][next_station] = g[next_station][start] = i;
-            graph[start].emplace_back(next_station);
-            graph[next_station].emplace_back(start);
-            start = next_station;
-        }
-    }
     scanf("%d",&k);
-    for(int i=0;i<k;++i){
-        foot.clear();
-        best_line.clear();
-        fill(vis, vis+10000, false);
-        scanf("%d%d",&start,&destination);
-        int min_step = 10000;
-        int min_trans = 10000;
-        vector<int> lines;
-        dfs(start, 0, min_step, 0, min_trans, -1, lines);
-        printf("%d\n",min_step);
-        for(int i=0;i<min_trans;++i){
-            printf("Take Line#%d from %04d to ",best_line[i],best_trans[i]);
-            if(i != min_trans-1)
-                printf("%04d.\n",best_trans[i+1]);
-            else
-                printf("%04d.\n",destination);
+    while (k--) {
+        fill(used, used+MAXN, false);
+        scanf("%d",&n);
+        int cur;
+        bool flag = true;
+        for(int i=0;i<n;++i){
+            scanf("%d",&cur);
+            if(i==0 && cur < 0) flag = false;
+            if(cur == 0) flag = false;
+            insert(1, cur);
         }
-        
+        if(!flag) printf("No\n");
+        else{
+            vector<int> v;
+            int black = -1;
+            dfs(1, black, v, flag);
+            if(!flag) printf("No\n");
+            else printf("Yes\n");
+        }
     }
 }

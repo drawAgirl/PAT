@@ -124,4 +124,8 @@
 1128|简单判断|[N Queens Puzzle ](/c++/1128.cpp)|[N Queens Puzzle-超时](/Python3/1128.py)
 1129|排序|[Recommendation System ](/c++/1129.cpp)|[Recommendation System](/Python3/1129.py)
 1130|树的遍历|[Infix Expression ](/c++/1130.cpp)|[Infix Expression](/Python3/1130.py)
-1131|DFS+剪枝|[Subway Map ](/c++/1131.cpp)|
+1131|DFS+剪枝|[Subway Map ](/c++/1131.cpp)|[Subway Map ](/Python3/1131.py)
+1132|字符串|[Cut Integer](/c++/1132.cpp)|[Cut Integer](/Python3/1132.py)
+1133|链表|[Splitting A Linked List](/c++/1133.cpp)|[Splitting A Linked List](/Python3/1133.py)
+1134|图的遍历|[Vertex Cover](/c++/1134.cpp)|[Vertex Cover](/Python3/1134.py)
+1135|红黑树|[Is It A Red-Black Tree](/c++/1135.cpp)[Is It A Red-Black Tree](/Python3/1135.py)
