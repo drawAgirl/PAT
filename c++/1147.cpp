@@ -50,11 +50,11 @@ bool isMin(){
 }
 
 int cnt = 0;
-void inorder(int root){
+void postorder(int root){
     if(root > n)
         return;
-    inorder(2*root);
-    inorder(2*root+1);
+    postorder(2*root);
+    postorder(2*root+1);
     ans[cnt++] = tree[root];
 }
 void show(){
@@ -80,7 +80,7 @@ int main(){
             }else
                 printf("Not Heap\n");
         }
-        inorder(1);
+        postorder(1);
         show();
     }
     
