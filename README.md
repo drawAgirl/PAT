@@ -139,3 +139,5 @@
 1143|LCA|[Lowest Common Ancestor](/c++/1143.cpp)|[Lowest Common Ancestor-超时](/Python3/1143.py)
 1144|哈希|[The Missing Number](/c++/1144.cpp)|[The Missing Number](/Python3/1144.py)
 1145|哈希|[Hashing - Average Search Time](/c++/1145.cpp)|[Hashing - Average Search Time](/Python3/1145.py)
+1146|拓扑排序|[Topological Order](/c++/1146.cpp)|[Topological Order](/Python3/1146.py)
+1147|堆|[Heaps](/c++/1147.cpp)|[Heaps-超时](/Python3/1147.py)
