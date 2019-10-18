@@ -59,7 +59,6 @@ int main(){
             if(used[location] == false) break;
             if(v[location] == key) break;
         }
-//        printf("%d\n",cnt);
     }
     printf("%.1f",1.0*cnt/m);
     

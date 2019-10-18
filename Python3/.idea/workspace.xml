@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07509950-11d1-4e0d-a278-28a8eb1ff654" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1136.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1137.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1138.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1139.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1140.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1141.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1142.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1143.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1144.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1145.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/1133.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/1133.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/1134.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/1134.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/1135.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/1135.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/project.xcworkspace/xcuserdata/zhengqiteng.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/project.xcworkspace/xcuserdata/zhengqiteng.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/xcuserdata/zhengqiteng.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/xcuserdata/zhengqiteng.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../whatever/whatever/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../whatever/whatever/main.cpp" afterDir="false" />
@@ -58,6 +47,7 @@
     <SUITE FILE_PATH="coverage/Python3$1141.coverage" NAME="1141 Coverage Results" MODIFIED="1571382335507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python3$1123.coverage" NAME="1123 Coverage Results" MODIFIED="1571140354995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python3$1034.coverage" NAME="1034 Coverage Results" MODIFIED="1570117023376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python3$1145.coverage" NAME="1145 Coverage Results" MODIFIED="1571392229438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python3$1059.coverage" NAME="1059 Coverage Results" MODIFIED="1570549031563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python3$1130.coverage" NAME="1130 Coverage Results" MODIFIED="1571219692686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python3$1041.coverage" NAME="1041 Coverage Results" MODIFIED="1569237768423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -160,15 +150,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1135.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1136.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -240,11 +221,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1144.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="45">
+              <caret line="3" column="23" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1145.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -292,7 +282,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1088.py" />
         <option value="$PROJECT_DIR$/1089.py" />
         <option value="$PROJECT_DIR$/1091.py" />
         <option value="$PROJECT_DIR$/1080.py" />
@@ -343,6 +332,7 @@
         <option value="$PROJECT_DIR$/1142.py" />
         <option value="$PROJECT_DIR$/1143.py" />
         <option value="$PROJECT_DIR$/1144.py" />
+        <option value="$PROJECT_DIR$/1145.py" />
       </list>
     </option>
   </component>
@@ -389,29 +379,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.1144">
-    <configuration name="1140" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Python3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1140.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.1145">
     <configuration name="1141" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -500,6 +468,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="1145" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1145.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Python3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -524,19 +514,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.1140" />
       <item itemvalue="Python.1141" />
       <item itemvalue="Python.1142" />
       <item itemvalue="Python.1143" />
       <item itemvalue="Python.1144" />
+      <item itemvalue="Python.1145" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1145" />
         <item itemvalue="Python.1144" />
         <item itemvalue="Python.1143" />
         <item itemvalue="Python.1142" />
         <item itemvalue="Python.1141" />
-        <item itemvalue="Python.1140" />
       </list>
     </recent_temporary>
   </component>
@@ -575,12 +565,12 @@
       <workItem from="1571150824188" duration="6632000" />
       <workItem from="1571201790026" duration="93000" />
       <workItem from="1571201895102" duration="13742000" />
-      <workItem from="1571322067459" duration="5803000" />
+      <workItem from="1571322067459" duration="6515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195494000" />
+    <option name="totallyTimeSpent" value="196206000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -641,13 +631,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1082.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1096.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -694,13 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1108.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -980,10 +956,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1108.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1144.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1145.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
