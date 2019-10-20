@@ -40,7 +40,7 @@
 1031|画图|[Hello World for U](/c++/1031.cpp)|[Hello World for U](/Python3/1031.py)
 1032|链表|[Sharing](/c++/1032.cpp)|[Sharing](/Python3/1032.py)
 1033|贪心|[To Fill or Not to Fill](/c++/1033.cpp)|[To Fill or Not to Fill](/Python3/1033.py)
-1034|DFS|[Head of a Gang](/c++/1034.cpp)|[Head of a Gang](/c++/1034.cpp)
+1034|DFS|[Head of a Gang](/c++/1034.cpp)|[Head of a Gang](/Python3/1034.py)
 1035|字符串处理|[Password](/c++/1035.cpp)|[Password](/Python3/1035.py)
 1036|排序查找|[Boys vs Girls](/c++/1036.cpp)|[Boys vs Girls](/Python3/1036.py)
 1037|贪心排序|[Magic Coupon](/c++/1037.cpp)|[Magic Coupon](/Python3/1037.py)
@@ -49,7 +49,7 @@
 1041|哈希|[Be Unique](/c++/1041.cpp)|[Be Unique](/Python3/1041.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py) 
 1043|BST|[Is It a Binary Search Tree](/c++/1043.cpp)|[Is It a Binary Search Tree-非0返回](/Python3/1043.py)
-1044|||
+1044|二分|[Shopping in Mars](/c++/1044.cpp)|[Shopping in Mars](/Python3/1044.py)
 1045|||
 1046|预处理|[Shortest Distance](/c++/1046.cpp)|[Shortest Distance](/Python3/1046.py)
 1047|排序|[Student List for Course ](/c++/1047.cpp)|[Student List for Course-超时](/Python3/1047.py)
