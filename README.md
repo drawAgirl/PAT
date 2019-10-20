@@ -20,14 +20,19 @@
 1011|排序查找|[World Cup Betting](/c++/1011.cpp)|[World Cup Betting](/Python3/1011.py)
 1012|排序查找|[The Best Rank](/c++/1012.cpp)|[The Best Rank](/Python3/1012.py)
 1013|DFS|[Battle Over Cities](/c++/1013.cpp)|[Battle Over Cities-超时](/Python3/1013.py)
+1014|||
 1015|素数|[Reversible Primes](/c++/1015.cpp)|[Reversible Primes](/Python3/1015.py)
+1016|||
+1017|||
 1018|最短路|[Public Bike Management](/c++/1018.cpp)|[Public Bike Management-22分](/Python3/1018.py)
 1019|进制转换|[General Palindromic Number](/c++/1019.cpp)|[General Palindromic Number](/Python3/1019.py)
 1020|二叉树遍历|[Tree Traversals](/c++/1020.cpp)|[Tree Traversals](/Python3/1020.py)
+1021|||
 1022|排序|[Digital Library](/c++/1022.cpp)|[Digital Library](/Python3/1022.py)
 1023|数学|[Have Fun with Numbers](/c++/1023.cpp)|[Have Fun with Numbers](/Python3/1023.py)
 1024|数学|[Palindromic Number](/c++/1024.cpp)|[Palindromic Number](/Python3/1024.py)
 1025|结构体排序|[PAT Ranking](/c++/1025.cpp)|[PAT Ranking-超时](/c++/1025.py)
+1026|||
 1027|进制转换|[Colors in Mars ](/c++/1027.cpp)|[Colors in Mars ](/Python3/1027.py)
 1028|排序|[List Sorting](/c++/1028.cpp)|[List Sorting-超时](/Python3/1028.py)
 1029|双指针|[Median](/c++/1029.cpp)|[Median-超时](/Python3/1029.py)
@@ -44,6 +49,8 @@
 1041|哈希|[Be Unique](/c++/1041.cpp)|[Be Unique](/Python3/1041.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py) 
 1043|BST|[Is It a Binary Search Tree](/c++/1043.cpp)|[Is It a Binary Search Tree-非0返回](/Python3/1043.py)
+1044|||
+1045|||
 1046|预处理|[Shortest Distance](/c++/1046.cpp)|[Shortest Distance](/Python3/1046.py)
 1047|排序|[Student List for Course ](/c++/1047.cpp)|[Student List for Course-超时](/Python3/1047.py)
 1048|哈希|[Find Coins](/c++/1048.cpp)|[Find Coins](/Python3/1048.py)
