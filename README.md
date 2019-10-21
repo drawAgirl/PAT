@@ -46,6 +46,7 @@
 1037|贪心排序|[Magic Coupon](/c++/1037.cpp)|[Magic Coupon](/Python3/1037.py)
 1038|排序|[Recover the Smallest Number](/c++/1038.cpp)|[Recover the Smallest Number](/Python3/1038.py)
 1039|查找|[Course List for Student](/c++/1039.cpp)|[Course List for Student-非0返回](/Python3/1039.py)
+1040|DP|[Longest Symmetric String](/c++/1040.cpp)|[Longest Symmetric String](Python3/1040.py)
 1041|哈希|[Be Unique](/c++/1041.cpp)|[Be Unique](/Python3/1041.py)
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py) 
 1043|BST|[Is It a Binary Search Tree](/c++/1043.cpp)|[Is It a Binary Search Tree-非0返回](/Python3/1043.py)
