@@ -23,66 +23,53 @@ using namespace std;
 
 const int MAXN = 1e4+10;
 int n;
-unordered_map<int, vector<int>> g;
+vector<vector<int>> v;
+vector<int> ans;
 bool vis[MAXN] = {false};
-int max_depth = 0;
-vector<int> deep_root;
-
-void dfs(int root,int &cnt){
-    if(vis[root]) return;
+int max_height = 0;
+void dfs(int root,int height){
+    if(height > max_height){
+        max_height = height;
+        ans.clear();
+        ans.emplace_back(root);
+    }else if (height == max_height) ans.emplace_back(root);
     vis[root] = true;
-    cnt++;
-    for(auto &each:g[root]) dfs(each,cnt);
+    for(auto &each:v[root]){
+        if(vis[each]) continue;
+        dfs(each, height+1);
+    }
 }
+
 
 int main(){
     scanf("%d",&n);
-    if(n == 1){
-        printf("1");
-        return 0;
-    }
+    v.resize(n+1);
     int a,b;
     for(int i=1;i<n;++i){
         scanf("%d%d",&a,&b);
-        g[a].emplace_back(b);
-        g[b].emplace_back(a);
+        v[a].emplace_back(b);
+        v[b].emplace_back(a);
     }
-    int components = 0;
+    int s1 = 0;
     int cnt = 0;
-    bool flag = false;
+    set<int> s;
     for(int i=1;i<=n;++i){
-        fill(vis, vis+MAXN, false);
-        queue<int> q;
-        q.push(i);
-        int depth = 0;
-        while (!q.empty()) {
-            depth++;
-            int size = (int)q.size();
-            while (size--) {
-                int temp = q.front();
-                q.pop();
-                if(vis[temp] == false) cnt++;
-                vis[temp] = true;
-                for(auto &each:g[temp]){
-                    if(vis[each] == false) q.push(each);
-                }
-            }
+        if(vis[i]) continue;
+        dfs(i, 1);
+        if(i==1){
+            if(ans.size() != 0) s1 = ans[0];
+            for(auto &each:ans) s.insert(each);
         }
-        if(depth > max_depth){
-            max_depth = depth;
-            deep_root.clear();
-            deep_root.emplace_back(i);
-        }else if (depth == max_depth) deep_root.emplace_back(i);
-        if(flag) continue;
-        if(cnt == n){
-            flag = true;
-            continue;
-        }else components++;
+        cnt ++;
         
     }
-    if(components > 0) printf("Error: %d components\n",components+1);
+    if(cnt > 1 ) printf("Error: %d components\n",cnt);
     else{
-        for(int i=0;i<(int)deep_root.size();++i) printf("%d\n",deep_root[i]);
-        
+        ans.clear();
+        max_height = 0;
+        fill(vis, vis+MAXN, false);
+        dfs(s1, 1);
+        for(auto &each:ans) s.insert(each);
+        for(auto &each:s) printf("%d\n",each);
     }
 }

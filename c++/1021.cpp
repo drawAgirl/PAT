@@ -2,7 +2,7 @@
 //  main.cpp
 //  test
 //
-//  Created by 李寻欢 on 2019/10/15.
+//  Created by 李寻欢 on 2019/10/20.
 //  Copyright © 2019 李寻欢. All rights reserved.
 //
 #include <stdio.h>
@@ -21,34 +21,55 @@
 #include <deque>
 using namespace std;
 
-int n,a,b,m,t;
-unordered_map<int, int> couple;
-unordered_map<int, bool> inparty;
-vector<int> v;
+const int MAXN = 1e4+10;
+int n;
+vector<vector<int>> v;
 vector<int> ans;
+bool vis[MAXN] = {false};
+int max_height = 0;
+void dfs(int root,int height){
+    if(height > max_height){
+        max_height = height;
+        ans.clear();
+        ans.emplace_back(root);
+    }else if (height == max_height) ans.emplace_back(root);
+    vis[root] = true;
+    for(auto &each:v[root]){
+        if(vis[each]) continue;
+        dfs(each, height+1);
+    }
+}
+
+
 int main(){
     scanf("%d",&n);
-    for(int i=0;i<n;++i){
+    v.resize(n+1);
+    int a,b;
+    for(int i=1;i<n;++i){
         scanf("%d%d",&a,&b);
-        couple[a] = b;
-        couple[b] = a;
+        v[a].emplace_back(b);
+        v[b].emplace_back(a);
     }
-    scanf("%d",&m);
-    for(int i=0;i<m;++i){
-        scanf("%d",&t);
-        inparty[t] = true;
-        v.emplace_back(t);
-    }
-    for(auto &dog:v){
-        if(couple.find(dog) == couple.end()) ans.emplace_back(dog);
-        else{
-            if(inparty.find(couple[dog]) == inparty.end()) ans.emplace_back(dog);
+    int s1 = 0;
+    int cnt = 0;
+    set<int> s;
+    for(int i=1;i<=n;++i){
+        if(vis[i]) continue;
+        dfs(i, 1);
+        if(i==1){
+            if(ans.size() != 0) s1 = ans[0];
+            for(auto &each:ans) s.insert(each);
         }
+        cnt ++;
+        
     }
-    sort(ans.begin(), ans.end());
-    printf("%d\n",(int)ans.size());
-    for(int i=0;i<(int)ans.size();++i){
-        printf("%05d",ans[i]);
-        if(i!=ans.size()-1) printf(" ");
+    if(cnt > 1 ) printf("Error: %d components\n",cnt);
+    else{
+        ans.clear();
+        max_height = 0;
+        fill(vis, vis+MAXN, false);
+        dfs(s1, 1);
+        for(auto &each:ans) s.insert(each);
+        for(auto &each:s) printf("%d\n",each);
     }
 }

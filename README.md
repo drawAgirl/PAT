@@ -27,7 +27,7 @@
 1018|最短路|[Public Bike Management](/c++/1018.cpp)|[Public Bike Management-22分](/Python3/1018.py)
 1019|进制转换|[General Palindromic Number](/c++/1019.cpp)|[General Palindromic Number](/Python3/1019.py)
 1020|二叉树遍历|[Tree Traversals](/c++/1020.cpp)|[Tree Traversals](/Python3/1020.py)
-1021|||
+1021|DFS|[Deepest Root](/c++/1021.cpp)|[Deepest Root](/Python3/1021.py)
 1022|排序|[Digital Library](/c++/1022.cpp)|[Digital Library](/Python3/1022.py)
 1023|数学|[Have Fun with Numbers](/c++/1023.cpp)|[Have Fun with Numbers](/Python3/1023.py)
 1024|数学|[Palindromic Number](/c++/1024.cpp)|[Palindromic Number](/Python3/1024.py)
