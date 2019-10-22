@@ -51,7 +51,7 @@
 1042|模拟|[Shuffling Machine](/c++/1042.cpp)|[Shuffling Machine](/Python3/1042.py) 
 1043|BST|[Is It a Binary Search Tree](/c++/1043.cpp)|[Is It a Binary Search Tree-非0返回](/Python3/1043.py)
 1044|二分|[Shopping in Mars](/c++/1044.cpp)|[Shopping in Mars](/Python3/1044.py)
-1045|||
+1045|DP|[Favorite Color Stripe](/c++/1045.cpp)|[Favorite Color Stripe](/Python3/1045.py)
 1046|预处理|[Shortest Distance](/c++/1046.cpp)|[Shortest Distance](/Python3/1046.py)
 1047|排序|[Student List for Course ](/c++/1047.cpp)|[Student List for Course-超时](/Python3/1047.py)
 1048|哈希|[Find Coins](/c++/1048.cpp)|[Find Coins](/Python3/1048.py)
