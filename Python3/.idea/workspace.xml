@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07509950-11d1-4e0d-a278-28a8eb1ff654" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1045.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1045.py" beforeDir="false" afterPath="$PROJECT_DIR$/1045.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/project.xcworkspace/xcuserdata/zhengqiteng.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/project.xcworkspace/xcuserdata/zhengqiteng.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/xcuserdata/zhengqiteng.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../whatever/whatever.xcodeproj/xcuserdata/zhengqiteng.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../whatever/whatever/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../whatever/whatever/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -227,8 +225,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1045.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="29" selection-end-line="12" />
+            <state relative-caret-position="295">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -570,12 +568,12 @@
       <workItem from="1571201790026" duration="93000" />
       <workItem from="1571201895102" duration="13742000" />
       <workItem from="1571322067459" duration="20483000" />
-      <workItem from="1571653408178" duration="2126000" />
+      <workItem from="1571653408178" duration="2699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212300000" />
+    <option name="totallyTimeSpent" value="212873000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -590,12 +588,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.34978542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.34978542" />
       <window_info id="Structure" order="1" sideWeight="0.50164473" side_tool="true" weight="0.25679544" />
       <window_info id="Favorites" order="2" sideWeight="0.50164473" side_tool="true" weight="0.25679544" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4988086" visible="true" weight="0.33614457" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988086" weight="0.33614457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25301206" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -966,8 +964,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1045.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-end-line="12" />
+        <state relative-caret-position="295">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
         </state>
       </provider>
     </entry>
